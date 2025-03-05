@@ -15,10 +15,17 @@ class TaskController extends Controller
      */
     public function index(): Response
     {
-        $tasks = Task::orderBy('created_at', 'asc')->get();
+        $userId = session('user_id');
+
+        if ($userId) {
+            $tasks = Task::where('user_id', $userId)->orderBy('created_at', 'asc')->get();
+        } else {
+            $tasks = Task::orderBy('created_at', 'asc')->get();
+        }
 
         return Inertia::render('Index', [
             'tasks' => $tasks,
+            'userId' => $userId,
         ]);
     }
 
@@ -40,8 +47,11 @@ class TaskController extends Controller
             'task' => 'required|string|max:255',
         ]);
 
+        $userId = session('user_id');
+
         Task::create([
             'task' => $validated['task'],
+            'user_id' => $userId,
         ]);
     
         return to_route('index');

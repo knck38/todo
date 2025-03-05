@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('task');
             $table->boolean('status')->default(false);
+            $table->string('user_id');
             $table->timestamps();
         });
     }
