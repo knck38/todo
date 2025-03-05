@@ -3,7 +3,7 @@ Vue + Laravel + MySQL + Tailwind CSS を使用して開発したTODO管理アプ
 Dockerを利用して環境構築を行い、バックエンドとフロントエンドが連携するフルスタックアプリケーションになっています。
 
 ## 🎮 デモURL
-.
+https://todo-app-1-aa8b13eb4274.herokuapp.com/
 
 ## 🛠 使用技術
 - フロントエンド：Vue3、Vite、Inertia.js
@@ -21,3 +21,4 @@ Dockerを利用して環境構築を行い、バックエンドとフロント�
 - MySQLを活用したデータ管理
 - Dockerを使った環境構築
 - Tailwind CSSを用いた効率的なスタイリング
+- GitHubの基本操作
