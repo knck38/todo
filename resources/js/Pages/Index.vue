@@ -32,7 +32,6 @@ const deleteTask = (id) => {
     }
 };
 
-console.log(form.errors);
 </script>
  
 <template>
